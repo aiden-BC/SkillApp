@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 8538759500137438260}
   - component: {fileID: 4525001567137541060}
   - component: {fileID: 7026188938387154724}
+  - component: {fileID: 2409614185519788892}
   m_Layer: 0
   m_Name: corpo1
   m_TagString: Untagged
@@ -393,3 +394,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 0}
   respawnDelay: 3
+--- !u!114 &2409614185519788892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6231902838119152455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e61d234766fe88448b7fdebb897ce64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationVelocity: 100
