@@ -7,41 +7,39 @@ public class OpenSuitcase : MonoBehaviour
     public Animator animator;
     private bool isOpen = false;
 
-    private XRBaseInteractable interactable;
-
-    private void Awake()
-    {
-        interactable = GetComponent<XRBaseInteractable>();
-        Debug.Log("OpenSuitcase script initialized");
-    }
-
     private void OnEnable()
     {
-        interactable.selectEntered.AddListener(OnSelect);
-        Debug.Log("OpenSuitcase script enabled, listener added");
+        var simpleInteractable = GetComponent<XRSimpleInteractable>();
+        if (simpleInteractable != null)
+        {
+            simpleInteractable.selectEntered.AddListener(OnSelect);
+        }
     }
 
     private void OnDisable()
     {
-        interactable.selectEntered.RemoveListener(OnSelect);
-        Debug.Log("OpenSuitcase script disabled, listener removed");
+        var simpleInteractable = GetComponent<XRSimpleInteractable>();
+        if (simpleInteractable != null)
+        {
+            simpleInteractable.selectEntered.RemoveListener(OnSelect);
+        }
     }
 
     private void OnSelect(SelectEnterEventArgs args)
     {
-        Debug.Log("Suitcase selected");
+        Debug.Log("Select (clic izquierdo) detectado en: " + gameObject.name);
+
+        if (animator == null) return;
+
         if (!isOpen)
         {
-            Debug.Log("Suitcase opened");
             animator.SetBool("Open", true);
-            isOpen = true;
         }
         else
         {
-            Debug.Log("Suitcase closed");
             animator.SetBool("Close", true);
-            isOpen = false;
         }
-        
+
+        isOpen = !isOpen;
     }
 }

@@ -40,7 +40,5 @@ internal class Respawn : MonoBehaviour
             Debug.Log("spawner");
             spawner.TrySpawnObject(spawnPoint, spawnNormal);
         }
-
-        //Destroy(gameObject); // Optional: remove the current object
     }
 }
