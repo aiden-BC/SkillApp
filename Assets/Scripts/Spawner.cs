@@ -12,6 +12,8 @@ using Random = UnityEngine.Random;
 /// </summary>
 public class ObjectSpawner : MonoBehaviour
 {
+    private GameObject currentObject;
+
     [SerializeField]
     [Tooltip("The camera that objects will face when spawned. If not set, defaults to the main camera.")]
     Camera m_CameraToFace;
@@ -197,8 +199,11 @@ public class ObjectSpawner : MonoBehaviour
     /// Otherwise, it will spawn the prefab at the index.
     /// </remarks>
     /// <seealso cref="objectSpawned"/>
+
     public bool TrySpawnObject(Vector3 spawnPoint, Vector3 spawnNormal)
     {
+        if (currentObject != null)return false;
+
         if (m_OnlySpawnInView)
         {
             var inViewMin = m_ViewportPeriphery;
@@ -213,12 +218,16 @@ public class ObjectSpawner : MonoBehaviour
 
         var objectIndex = isSpawnOptionRandomized ? Random.Range(0, m_ObjectPrefabs.Count) : m_SpawnOptionIndex;
         var newObject = Instantiate(m_ObjectPrefabs[objectIndex]);
+        currentObject = newObject; // Track the spawned object
+
 
         // Assign spawner reference
         var respawnComponent = newObject.GetComponent<Respawn>();
         if (respawnComponent != null)
         {
             respawnComponent.spawner = this;
+            respawnComponent.SetSpawnPoint(spawnPoint, spawnNormal);
+
         }
 
         // Ensure XRGrabInteractable is registered
@@ -266,6 +275,15 @@ public class ObjectSpawner : MonoBehaviour
         Vector3 spawnNormal = Vector3.up;
 
         TrySpawnObject(spawnPoint, spawnNormal);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (currentObject != null && other.gameObject == currentObject)
+        {
+            Debug.Log("Spawned object exited trigger zone.");
+            currentObject = null;
+        }
     }
 
 }
