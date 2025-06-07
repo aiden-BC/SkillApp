@@ -9,25 +9,30 @@ public class OpenSuitcase : MonoBehaviour
 
     private void OnEnable()
     {
+        Debug.Log("Enabled");
         var simpleInteractable = GetComponent<XRSimpleInteractable>();
-        if (simpleInteractable != null)
-        {
-            simpleInteractable.selectEntered.AddListener(OnSelect);
-        }
+        
+        //if (simpleInteractable != null)
+        //{
+        //    //simpleInteractable.selectEntered.AddListener(OnSelect);
+        //    Debug.Log("Listener added to: " + gameObject.name);
+        //    simpleInteractable.activated.AddListener(OnActivate);
+        //}
     }
 
-    private void OnDisable()
-    {
-        var simpleInteractable = GetComponent<XRSimpleInteractable>();
-        if (simpleInteractable != null)
-        {
-            simpleInteractable.selectEntered.RemoveListener(OnSelect);
-        }
-    }
+    //private void OnDisable()
+    //{
+    //    var simpleInteractable = GetComponent<XRSimpleInteractable>();
+    //    if (simpleInteractable != null)
+    //    {
+    //        //simpleInteractable.selectEntered.RemoveListener(OnSelect);
+    //        simpleInteractable.activated.RemoveListener(OnActivate);
+    //    }
+    //}
 
-    private void OnSelect(SelectEnterEventArgs args)
+    public void OnActivate(ActivateEventArgs args)
     {
-        Debug.Log("Select (clic izquierdo) detectado en: " + gameObject.name);
+        Debug.Log("Select detectado en: " + gameObject.name);
 
         if (animator == null) return;
 

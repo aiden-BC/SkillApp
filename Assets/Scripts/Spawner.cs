@@ -12,7 +12,9 @@ using Random = UnityEngine.Random;
 /// </summary>
 public class ObjectSpawner : MonoBehaviour
 {
-    private GameObject currentObject;
+    private GameObject currentObject; // Track the currently spawned object
+    private bool isOccupied = false;
+
 
     [SerializeField]
     [Tooltip("The camera that objects will face when spawned. If not set, defaults to the main camera.")]
@@ -200,17 +202,18 @@ public class ObjectSpawner : MonoBehaviour
     /// </remarks>
     /// <seealso cref="objectSpawned"/>
 
+
     public bool TrySpawnObject(Vector3 spawnPoint, Vector3 spawnNormal)
     {
-        if (currentObject != null)return false;
+        if (isOccupied) return false;
 
         if (m_OnlySpawnInView)
         {
             var inViewMin = m_ViewportPeriphery;
             var inViewMax = 1f - m_ViewportPeriphery;
-            var pointInViewportSpace = cameraToFace.WorldToViewportPoint(spawnPoint);
+            var pointInViewportSpace = m_CameraToFace.GetComponent<Camera>().WorldToViewportPoint(spawnPoint);
             if (pointInViewportSpace.z < 0f || pointInViewportSpace.x > inViewMax || pointInViewportSpace.x < inViewMin ||
-                pointInViewportSpace.y > inViewMax || pointInViewportSpace.y < inViewMin)
+            pointInViewportSpace.y > inViewMax || pointInViewportSpace.y < inViewMin)
             {
                 return false;
             }
@@ -218,26 +221,20 @@ public class ObjectSpawner : MonoBehaviour
 
         var objectIndex = isSpawnOptionRandomized ? Random.Range(0, m_ObjectPrefabs.Count) : m_SpawnOptionIndex;
         var newObject = Instantiate(m_ObjectPrefabs[objectIndex]);
-        currentObject = newObject; // Track the spawned object
+        currentObject = newObject;
 
-
-        // Assign spawner reference
         var respawnComponent = newObject.GetComponent<Respawn>();
         if (respawnComponent != null)
         {
             respawnComponent.spawner = this;
             respawnComponent.SetSpawnPoint(spawnPoint, spawnNormal);
-
         }
 
-        // Ensure XRGrabInteractable is registered
         var grabInteractable = newObject.GetComponent<XRGrabInteractable>();
         if (grabInteractable != null && interactionManager != null)
         {
             grabInteractable.interactionManager = interactionManager;
         }
-
-
 
         if (m_SpawnAsChildren)
             newObject.transform.parent = transform;
@@ -268,6 +265,7 @@ public class ObjectSpawner : MonoBehaviour
         return true;
     }
 
+
     void Start()
     {
         // Use the spawner's own position and an upward normal for spawning
@@ -277,14 +275,26 @@ public class ObjectSpawner : MonoBehaviour
         TrySpawnObject(spawnPoint, spawnNormal);
     }
 
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<XRGrabInteractable>() != null)
+        {
+            isOccupied = true;
+        }
+    }
+
+
     private void OnTriggerExit(Collider other)
     {
         if (currentObject != null && other.gameObject == currentObject)
         {
             Debug.Log("Spawned object exited trigger zone.");
+            isOccupied = false;
             currentObject = null;
         }
     }
+
 
 }
 
