@@ -984,6 +984,7 @@ GameObject:
   - component: {fileID: 1068830154551117798}
   - component: {fileID: 9076182674791789661}
   - component: {fileID: 3462149010614969918}
+  - component: {fileID: 4786750178955573805}
   m_Layer: 0
   m_Name: Body2_LongHair
   m_TagString: Untagged
@@ -1195,6 +1196,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 0}
   respawnDelay: 3
+--- !u!114 &4786750178955573805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6583708290207545341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb5467de1caabff418c62214b93238f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upperArmBone: {fileID: 4028723546082443819, guid: 19d62ec038e725840b860e7ef3b5844b,
+    type: 3}
+  lowerArmBone: {fileID: 1925362755820876831, guid: 19d62ec038e725840b860e7ef3b5844b,
+    type: 3}
+  detectionRadius: 0.05
+  upperArmExtendedRotation: {x: 16.857, y: 51.756, z: 63.413}
+  lowerArmExtendedRotation: {x: 35.585, y: 26.114, z: 37.393}
+  upperArmDefaultRotation: {x: 9.689, y: -3.005, z: 54.965}
+  lowerArmDefaultRotation: {x: 3.382, y: 8.693, z: 9.833}
 --- !u!1 &7196764743888360175
 GameObject:
   m_ObjectHideFlags: 0

@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 3148895450541390431}
   - component: {fileID: 4158083719749263062}
   - component: {fileID: 7350091316151534977}
-  - component: {fileID: 1662870301696279648}
+  - component: {fileID: 4439987084773841049}
   m_Layer: 0
   m_Name: Body2_Bald
   m_TagString: Untagged
@@ -479,7 +479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 0}
   respawnDelay: 3
---- !u!114 &1662870301696279648
+--- !u!114 &4439987084773841049
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -488,10 +488,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 4114577457600439974}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bbe3cee901d4e74787f2f7a0a76decf, type: 3}
+  m_Script: {fileID: 11500000, guid: eb5467de1caabff418c62214b93238f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectType: 3
+  upperArmBone: {fileID: 4028723546082443819, guid: 19d62ec038e725840b860e7ef3b5844b,
+    type: 3}
+  lowerArmBone: {fileID: 1925362755820876831, guid: 19d62ec038e725840b860e7ef3b5844b,
+    type: 3}
+  detectionRadius: 0.05
+  upperArmExtendedRotation: {x: 16.857, y: 51.756, z: 63.413}
+  lowerArmExtendedRotation: {x: 35.585, y: 26.114, z: 37.393}
+  upperArmDefaultRotation: {x: 9.689, y: -3.005, z: 54.965}
+  lowerArmDefaultRotation: {x: 3.382, y: 8.693, z: 9.833}
 --- !u!1 &4277932285014593276
 GameObject:
   m_ObjectHideFlags: 0

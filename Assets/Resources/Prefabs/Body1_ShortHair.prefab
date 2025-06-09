@@ -118,6 +118,37 @@ Transform:
   - {fileID: 8313460905441760076}
   m_Father: {fileID: 2588482215920610486}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &650781623761532808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9180821686876131754}
+  m_Layer: 0
+  m_Name: HandAttach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9180821686876131754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650781623761532808}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.025, y: 0.0195, z: 0.055}
+  m_LocalScale: {x: 1.7954999, y: 1.7954999, z: 1.7954999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6927050182067676668}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &986960893040896567
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +404,7 @@ Transform:
   m_Children:
   - {fileID: 1460511222974744092}
   - {fileID: 7818275307719221273}
+  - {fileID: 9180821686876131754}
   m_Father: {fileID: 4727598480274572328}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &6269119506975386965
@@ -589,6 +621,7 @@ GameObject:
   - component: {fileID: 3444346408399767322}
   - component: {fileID: 5190266061376763784}
   - component: {fileID: 510008731734674066}
+  - component: {fileID: 9122463121193632243}
   m_Layer: 0
   m_Name: Body1_ShortHair
   m_TagString: Untagged
@@ -799,6 +832,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 0}
   respawnDelay: 3
+--- !u!114 &9122463121193632243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5598041546002259474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb5467de1caabff418c62214b93238f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upperArmBone: {fileID: 4028723546082443819, guid: 19d62ec038e725840b860e7ef3b5844b,
+    type: 3}
+  lowerArmBone: {fileID: 1925362755820876831, guid: 19d62ec038e725840b860e7ef3b5844b,
+    type: 3}
+  detectionRadius: 0.05
+  upperArmExtendedRotation: {x: 16.857, y: 51.756, z: 63.413}
+  lowerArmExtendedRotation: {x: 35.585, y: 26.114, z: 37.393}
+  upperArmDefaultRotation: {x: 9.689, y: -3.005, z: 54.965}
+  lowerArmDefaultRotation: {x: 3.382, y: 8.693, z: 9.833}
 --- !u!1 &6113508860415566830
 GameObject:
   m_ObjectHideFlags: 0
