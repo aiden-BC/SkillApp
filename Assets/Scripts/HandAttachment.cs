@@ -1,79 +1,55 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
-using System.Collections;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class HandAttachment : MonoBehaviour
 {
     public Transform handTransform;
+    public float reattachCooldown = 2.0f;
+
+    private Dictionary<HoldableObject, float> cooldownTimers = new Dictionary<HoldableObject, float>();
+
+    private void Update()
+    {
+        // Actualizar los cooldowns
+        List<HoldableObject> keys = new List<HoldableObject>(cooldownTimers.Keys);
+        foreach (var obj in keys)
+        {
+            cooldownTimers[obj] -= Time.deltaTime;
+            if (cooldownTimers[obj] <= 0)
+            {
+                cooldownTimers.Remove(obj);
+            }
+        }
+    }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("HoldObject"))
-        {
-            RotateArm rotateArm = GetComponent<RotateArm>();
-            rotateArm.rotateHold();
-
-            HoldableObject holdable = other.GetComponent<HoldableObject>();
-            XRGrabInteractable grabInteractable = other.GetComponent<XRGrabInteractable>();
-
-            if (holdable != null && !holdable.isAttachedToHand)
-            {
-                StartCoroutine(AttachToHandCoroutine(holdable, grabInteractable));
-            }
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-
         if (!other.CompareTag("HoldObject")) return;
 
         HoldableObject holdable = other.GetComponent<HoldableObject>();
-        if (holdable == null || !holdable.isAttachedToHand) return;
+        XRGrabInteractable grabInteractable = other.GetComponent<XRGrabInteractable>();
 
-        // Verifica si aún está dentro del trigger
-        if (Vector3.Distance(other.transform.position, transform.position) < 0.2f)
-        {
-            // Aún está cerca, probablemente fue un falso positivo
-            return;
-        }
+        if (holdable == null || grabInteractable == null) return;
 
-        Debug.Log("Trigger Exit: " + other.name);
+        // Si está en cooldown, no hacer nada
+        if (cooldownTimers.ContainsKey(holdable)) return;
 
         RotateArm rotateArm = GetComponent<RotateArm>();
-        rotateArm.resetHold();
+        rotateArm.rotateHold();
 
-        if (other.CompareTag("HoldObject"))
+        if (!holdable.isAttachedToHand)
         {
-            XRGrabInteractable grabInteractable = other.GetComponent<XRGrabInteractable>();
-
-            if (holdable != null && holdable.isAttachedToHand)
-            {
-                // Desvincular de la mano
-                holdable.transform.SetParent(null);
-                holdable.isAttachedToHand = false;
-
-                // Reactivar física
-                Rigidbody rb = holdable.GetComponent<Rigidbody>();
-                if (rb != null)
-                {
-                    rb.isKinematic = false;
-                }
-
-                // Asegurar que el interactable esté activo
-                if (!grabInteractable.enabled)
-                {
-                    grabInteractable.enabled = true;
-                }
-            }
+            StartCoroutine(AttachToHandCoroutine(holdable, grabInteractable));
         }
     }
-
 
     private IEnumerator AttachToHandCoroutine(HoldableObject holdable, XRGrabInteractable grabInteractable)
     {
         grabInteractable.enabled = true;
+
         // Forzar soltado si está agarrado
         if (grabInteractable.isSelected)
         {
@@ -85,20 +61,21 @@ public class HandAttachment : MonoBehaviour
                 interactionManager.SelectExit(interactor, grabInteractable);
             }
 
-            // Esperar un frame para asegurar que se suelte
             yield return null;
         }
 
-        // Desactivar temporalmente el interactable para evitar que se vuelva a agarrar
+        // Desactivar temporalmente el interactable
         grabInteractable.enabled = false;
 
-        // Colocar en la mano
+        // Colocar en la mano del personaje
         grabInteractable.transform.SetParent(handTransform);
         grabInteractable.transform.localPosition = Vector3.zero;
-        grabInteractable.transform.localRotation = Quaternion.identity;
-        holdable.isAttachedToHand = true;
+        grabInteractable.transform.localRotation = Quaternion.Euler(90f, 0f, 0f);
 
-        // Opcional: desactivar física
+        holdable.isAttachedToHand = true;
+        holdable.currentOwner = this;
+
+        // Desactivar física
         Rigidbody rb = grabInteractable.GetComponent<Rigidbody>();
         if (rb != null)
         {
@@ -108,5 +85,12 @@ public class HandAttachment : MonoBehaviour
         // Esperar un poco y volver a activar el interactable
         yield return new WaitForSeconds(0.5f);
         grabInteractable.enabled = true;
+    }
+
+    public void StartCooldown(HoldableObject holdable)
+    {
+        cooldownTimers[holdable] = reattachCooldown;
+        RotateArm rotateArm = GetComponent<RotateArm>();
+        rotateArm.resetHold();
     }
 }

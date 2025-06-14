@@ -622,6 +622,7 @@ GameObject:
   - component: {fileID: 5190266061376763784}
   - component: {fileID: 510008731734674066}
   - component: {fileID: 9122463121193632243}
+  - component: {fileID: 7748118653259109445}
   m_Layer: 0
   m_Name: Body1_ShortHair
   m_TagString: Untagged
@@ -848,11 +849,24 @@ MonoBehaviour:
     type: 3}
   lowerArmBone: {fileID: 1925362755820876831, guid: 19d62ec038e725840b860e7ef3b5844b,
     type: 3}
-  detectionRadius: 0.05
   upperArmExtendedRotation: {x: 16.857, y: 51.756, z: 63.413}
   lowerArmExtendedRotation: {x: 35.585, y: 26.114, z: 37.393}
   upperArmDefaultRotation: {x: 9.689, y: -3.005, z: 54.965}
   lowerArmDefaultRotation: {x: 3.382, y: 8.693, z: 9.833}
+--- !u!114 &7748118653259109445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5598041546002259474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aefc341689f9049419e5bdc27ca12d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handTransform: {fileID: 6432405386523863177}
+  reattachCooldown: 2
 --- !u!1 &6113508860415566830
 GameObject:
   m_ObjectHideFlags: 0

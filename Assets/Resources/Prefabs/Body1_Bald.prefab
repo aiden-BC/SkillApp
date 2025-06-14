@@ -607,7 +607,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aefc341689f9049419e5bdc27ca12d48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handTransform: {fileID: 1753359760081064127}
+  handTransform: {fileID: 1239895730091178029}
+  reattachCooldown: 2
 --- !u!65 &2316493190780733002
 BoxCollider:
   m_ObjectHideFlags: 0
