@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 2230471746547804292}
   - component: {fileID: 6088002938696339616}
   - component: {fileID: 8619175376382223081}
-  - component: {fileID: 1563531909576021882}
+  - component: {fileID: 6265345467377880845}
   m_Layer: 0
   m_Name: tapa_arriba
   m_TagString: Untagged
@@ -394,8 +394,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &1563531909576021882
-MeshCollider:
+--- !u!65 &6265345467377880845
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -412,10 +412,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2534964839176971238, guid: 5817d26e8e4f4cb45ab812143e250af1, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.0034999996, y: 0.0025165193, z: 0.000077903096}
+  m_Center: {x: -0.0000000037639905, y: -0.0012578452, z: 0.00046373715}
 --- !u!1 &8506944294477081476
 GameObject:
   m_ObjectHideFlags: 0

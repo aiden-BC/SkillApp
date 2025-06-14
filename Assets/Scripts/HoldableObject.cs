@@ -5,9 +5,8 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 [RequireComponent(typeof(XRGrabInteractable))]
 public class HoldableObject : MonoBehaviour
 {
-    public bool isAttachedToHand = false;
-    public HandAttachment currentOwner;
-
+    public bool isAttached = false;
+    public IAttachmentOwner currentOwner;
     private XRGrabInteractable grabInteractable;
 
     private void Awake()
@@ -25,12 +24,12 @@ public class HoldableObject : MonoBehaviour
 
     private void OnSelectEntered(SelectEnterEventArgs args)
     {
-        if (isAttachedToHand)
+        if (isAttached)
         {
             Debug.Log("Espada agarrada por el jugador. Soltando del personaje.");
 
             transform.SetParent(null);
-            isAttachedToHand = false;
+            isAttached = false;
 
             currentOwner?.StartCooldown(this);
             currentOwner = null;
