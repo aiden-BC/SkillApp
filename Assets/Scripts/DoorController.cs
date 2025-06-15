@@ -1,24 +1,46 @@
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 namespace XRMultiplayer
 {
     public class DoorController : MonoBehaviour
     {
-        [SerializeField] private Animator animator = null;
+        public Animator animator;
+        private bool isOpen = false;
 
-        void Start()
+        private void OnEnable()
         {
-            animator = GetComponent<Animator>();
+            var simpleInteractable = GetComponent<XRSimpleInteractable>();
+            if (simpleInteractable != null)
+            {
+                simpleInteractable.selectEntered.AddListener(OnSelect);
+            }
         }
 
-        public void OpenDoor()
+        private void OnDisable()
         {
-            animator.Play("Door-Open");
+            var simpleInteractable = GetComponent<XRSimpleInteractable>();
+            if (simpleInteractable != null)
+            {
+                simpleInteractable.selectEntered.RemoveListener(OnSelect);
+            }
         }
 
-        public void CloseDoor()
+        private void OnSelect(SelectEnterEventArgs args)
         {
-            animator.Play("CloseDoor");
+            if (animator == null) return;
+
+            if (!isOpen)
+            {
+                animator.SetBool("Open", true);
+            }
+            else
+            {
+                animator.SetBool("Close", true);
+            }
+
+            isOpen = !isOpen;
         }
     }
 }
