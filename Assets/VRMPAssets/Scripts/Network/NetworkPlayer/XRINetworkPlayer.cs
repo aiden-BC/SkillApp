@@ -191,10 +191,11 @@ namespace XRMultiplayer
                 {
                     m_VoicePositionCheckTimer += m_VoicePositionUpdateTime;
 
-                    if (Vector3.Distance(m_PrevHeadPos, m_HeadOrigin.position) > m_VoiceUpdatePosotionDelta)
+                    if (m_HeadOrigin != null && Vector3.Distance(m_PrevHeadPos, m_HeadOrigin.position) > m_VoiceUpdatePosotionDelta)
                     {
                         m_PrevHeadPos = m_HeadOrigin.position;
-                        if (XRINetworkGameManager.Instance.positionalVoiceChat)
+
+                        if (XRINetworkGameManager.Instance.positionalVoiceChat && m_VoiceChat != null)
                         {
                             m_VoiceChat.Set3DAudio(m_HeadOrigin);
                         }
@@ -205,16 +206,22 @@ namespace XRMultiplayer
             m_VoiceAmplitudeCurrent = Mathf.Lerp(m_VoiceAmplitudeCurrent, m_VoiceAmplitudeDestination, Time.deltaTime * k_VoiceAmplitudeSpeed);
         }
 
+
         ///<inheritdoc/>
         protected virtual void LateUpdate()
         {
             if (!IsOwner) return;
 
-            // Set transforms to be replicated with ClientNetworkTransforms
-            leftHand.SetPositionAndRotation(m_LeftHandOrigin.position, m_LeftHandOrigin.rotation);
-            rightHand.SetPositionAndRotation(m_RightHandOrigin.position, m_RightHandOrigin.rotation);
-            head.SetPositionAndRotation(m_HeadOrigin.position, m_HeadOrigin.rotation);
+            if (m_LeftHandOrigin != null)
+                leftHand.SetPositionAndRotation(m_LeftHandOrigin.position, m_LeftHandOrigin.rotation);
+
+            if (m_RightHandOrigin != null)
+                rightHand.SetPositionAndRotation(m_RightHandOrigin.position, m_RightHandOrigin.rotation);
+
+            if (m_HeadOrigin != null)
+                head.SetPositionAndRotation(m_HeadOrigin.position, m_HeadOrigin.rotation);
         }
+
 
         ///<inheritdoc/>
         public override void OnDestroy()

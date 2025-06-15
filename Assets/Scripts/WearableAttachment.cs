@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class WearableAttachment : MonoBehaviour, IAttachmentOwner
 {
     public Transform eyesTransform;
+    public Transform headTransform;
     public float reattachCooldown = 1.0f;
 
     private Dictionary<HoldableObject, float> cooldownTimers = new Dictionary<HoldableObject, float>();
@@ -25,22 +26,36 @@ public class WearableAttachment : MonoBehaviour, IAttachmentOwner
 
     private void OnTriggerStay(Collider other)
     {
-        if (!other.CompareTag("EyesObject")) return;
-        
+        string tag = other.tag;
+        Transform targetTransform = null;
+
+        if (tag == "EyesObject")
+        {
+            targetTransform = eyesTransform;
+        }
+        else if (tag == "HatObject")
+        {
+            targetTransform = headTransform;
+            Debug.Log("HatObject detected: " + other.name);
+        }
+        else
+        {
+            return;
+        }
+
         HoldableObject holdable = other.GetComponent<HoldableObject>();
         XRGrabInteractable grabInteractable = other.GetComponent<XRGrabInteractable>();
 
         if (holdable == null || grabInteractable == null) return;
         if (cooldownTimers.ContainsKey(holdable)) return;
 
-
         if (!holdable.isAttached)
         {
-            StartCoroutine(AttachToEyesCoroutine(holdable, grabInteractable));
+            StartCoroutine(AttachToTargetCoroutine(holdable, grabInteractable, targetTransform));
         }
     }
 
-    private IEnumerator AttachToEyesCoroutine(HoldableObject holdable, XRGrabInteractable grabInteractable)
+    private IEnumerator AttachToTargetCoroutine(HoldableObject holdable, XRGrabInteractable grabInteractable, Transform targetTransform)
     {
         grabInteractable.enabled = true;
 
@@ -59,7 +74,8 @@ public class WearableAttachment : MonoBehaviour, IAttachmentOwner
 
         grabInteractable.enabled = false;
 
-        grabInteractable.transform.SetParent(eyesTransform);
+        grabInteractable.transform.SetParent(targetTransform);
+        Debug.Log(targetTransform);
         grabInteractable.transform.localPosition = Vector3.zero;
         grabInteractable.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
 

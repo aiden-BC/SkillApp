@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 343486823880663282}
   - component: {fileID: -4525827553245965050}
   m_Layer: 0
-  m_Name: gafas
+  m_Name: Gafas
   m_TagString: EyesObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

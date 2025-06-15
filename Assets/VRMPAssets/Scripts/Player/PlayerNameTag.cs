@@ -62,12 +62,22 @@ namespace XRMultiplayer
 
         private void OnDestroy()
         {
-            m_Player.onColorUpdated -= UpdateColor;
-            m_Player.onNameUpdated -= UpdateName;
-            m_Player.selfMuted.OnValueChanged -= UpdateSelfMutedState;
-            m_Player.squelched.Unsubscribe(UpdateSquelchedState);
-            m_MuteButton.onClick.RemoveListener(SquelchPressed);
+            if (m_Player != null)
+            {
+                m_Player.onColorUpdated -= UpdateColor;
+                m_Player.onNameUpdated -= UpdateName;
+
+                if (m_Player.selfMuted != null)
+                    m_Player.selfMuted.OnValueChanged -= UpdateSelfMutedState;
+
+                if (m_Player.squelched != null)
+                    m_Player.squelched.Unsubscribe(UpdateSquelchedState);
+            }
+
+            if (m_MuteButton != null)
+                m_MuteButton.onClick.RemoveListener(SquelchPressed);
         }
+
 
         public void SetupNameTag(XRINetworkPlayer player)
         {

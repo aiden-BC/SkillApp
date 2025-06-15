@@ -11,6 +11,7 @@ TagManager:
   - Destroyer
   - HoldObject
   - EyesObject
+  - HatObject
   layers:
   - Default
   - TransparentFX
