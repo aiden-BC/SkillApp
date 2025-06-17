@@ -29,8 +29,6 @@ namespace XRMultiplayer
         [SerializeField] Toggle m_PrivacyToggle;
 
         [SerializeField] GameObject[] m_ConnectionSubPanels;
-        [SerializeField] private GameObject m_Door; // Reference to the door GameObject
-        [SerializeField] private Animator animator = null;
 
 
         VoiceChatManager m_VoiceChatManager;
@@ -61,11 +59,6 @@ namespace XRMultiplayer
             {
                 Destroy(t.gameObject);
             }
-        }
-
-        public void OpenDoor()
-        {
-            animator.Play("Door-Open", 0, 0.0f);
         }
 
         private void OnEnable()
@@ -222,8 +215,6 @@ namespace XRMultiplayer
             {
                 ToggleConnectionSubPanel(3);
                 XRINetworkGameManager.Connected.Unsubscribe(OnConnected);
-                Debug.Log($"JOINED - OPEN DOOR");
-                OpenDoor();
             }
         }
 
