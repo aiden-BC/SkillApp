@@ -374,6 +374,7 @@ Transform:
   - {fileID: 1460511222974744092}
   - {fileID: 7818275307719221273}
   - {fileID: 8833025803093754268}
+  - {fileID: 9185326223695752173}
   m_Father: {fileID: 4727598480274572328}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &6269119506975386965
@@ -471,6 +472,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0696981, y: 0.13018739, z: 0.0465404}
   m_Center: {x: -0.0010627285, y: -0.04385811, z: -0.0009394735}
+--- !u!1 &4711040468791012693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9185326223695752173}
+  m_Layer: 0
+  m_Name: headTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9185326223695752173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4711040468791012693}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0002, y: 0.055099994, z: -0.003100002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6927050182067676668}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5316645386281958028
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,7 +643,7 @@ Transform:
   m_GameObject: {fileID: 5598041546002259474}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -2.5415833, y: 1.1985242, z: -6.130479}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -842,7 +874,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5598041546002259474}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 056111519b91b584f823fe54d05312ba, type: 3}
   m_Name: 

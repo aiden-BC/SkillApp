@@ -15,8 +15,6 @@ internal class Respawn : MonoBehaviour
         var grabInteractable = GetComponent<XRGrabInteractable>();
         if (grabInteractable != null)
         {
-            Debug.Log("XRGrabInteractable");
-
             // Create an attach transform that matches the current world pose
             GameObject attachPoint = new GameObject("AttachTransform");
             attachPoint.transform.position = transform.position;
@@ -24,11 +22,6 @@ internal class Respawn : MonoBehaviour
             attachPoint.transform.SetParent(transform, true);
 
             grabInteractable.attachTransform = attachPoint.transform;
-
-            // Optional: disable snapping behavior
-            grabInteractable.attachEaseInTime = 0f;
-            grabInteractable.movementType = XRBaseInteractable.MovementType.VelocityTracking;
-
             grabInteractable.selectExited.AddListener(OnReleased);
         }
     }
@@ -42,8 +35,6 @@ internal class Respawn : MonoBehaviour
 
     private void OnReleased(SelectExitEventArgs args)
     {
-        Debug.Log("Released");
-
         // Update attach transform to match current pose
         if (spawner != null && TryGetComponent(out XRGrabInteractable grabInteractable))
         {
