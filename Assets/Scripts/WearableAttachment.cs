@@ -1,7 +1,8 @@
-using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
+using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class WearableAttachment : MonoBehaviour, IAttachmentOwner
 {
@@ -57,6 +58,14 @@ public class WearableAttachment : MonoBehaviour, IAttachmentOwner
 
     private IEnumerator AttachToTargetCoroutine(HoldableObject holdable, XRGrabInteractable grabInteractable, Transform targetTransform)
     {
+        // Desactiva NetworkObject si no estás en red
+        var netObj = grabInteractable.GetComponent<NetworkObject>();
+        if (netObj != null && netObj.enabled && (NetworkManager.Singleton == null || !NetworkManager.Singleton.IsListening))
+        {
+            Debug.LogWarning("Desactivando NetworkObject en tiempo de ejecución para evitar errores.");
+            netObj.enabled = false;
+        }
+
         grabInteractable.enabled = true;
 
         if (grabInteractable.isSelected)
@@ -75,7 +84,6 @@ public class WearableAttachment : MonoBehaviour, IAttachmentOwner
         grabInteractable.enabled = false;
 
         grabInteractable.transform.SetParent(targetTransform);
-        Debug.Log(targetTransform);
         grabInteractable.transform.localPosition = Vector3.zero;
         grabInteractable.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
 
@@ -91,6 +99,7 @@ public class WearableAttachment : MonoBehaviour, IAttachmentOwner
         yield return new WaitForSeconds(0.5f);
         grabInteractable.enabled = true;
     }
+
 
     public void StartCooldown(HoldableObject holdable)
     {
