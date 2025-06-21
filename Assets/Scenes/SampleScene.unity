@@ -710,6 +710,11 @@ PrefabInstance:
       objectReference: {fileID: 635857499}
     - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
+      propertyPath: assignedSpawnableID
+      value: 2-Bald
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
       propertyPath: m_ObjectPrefabs.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1035,6 +1040,11 @@ PrefabInstance:
       propertyPath: m_CameraToFace
       value: 
       objectReference: {fileID: 635857499}
+    - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: assignedSpawnableID
+      value: Small-bald
+      objectReference: {fileID: 0}
     - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
       propertyPath: 'm_ObjectPrefabs.Array.data[0]'
@@ -2472,9 +2482,14 @@ PrefabInstance:
       objectReference: {fileID: 635857499}
     - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
+      propertyPath: assignedSpawnableID
+      value: Small-short
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
       propertyPath: 'm_ObjectPrefabs.Array.data[0]'
       value: 
-      objectReference: {fileID: 5598041546002259474, guid: 70ca80cfa8cb85f40bafa16a458eea5b,
+      objectReference: {fileID: 5735800926940262736, guid: fbaaf1b082b257148ad9ef9fa3ec2425,
         type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4881,6 +4896,11 @@ PrefabInstance:
       propertyPath: m_CameraToFace
       value: 
       objectReference: {fileID: 635857499}
+    - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: assignedSpawnableID
+      value: 2-Long
+      objectReference: {fileID: 0}
     - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
       propertyPath: m_ObjectPrefabs.Array.size
@@ -7726,6 +7746,11 @@ PrefabInstance:
       objectReference: {fileID: 635857499}
     - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
+      propertyPath: assignedSpawnableID
+      value: Small-long
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
       propertyPath: 'm_ObjectPrefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 7220333485539538263, guid: d6eee84911828244393aa467d8cbf2c4,
@@ -8323,6 +8348,11 @@ PrefabInstance:
       propertyPath: m_CameraToFace
       value: 
       objectReference: {fileID: 635857499}
+    - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: assignedSpawnableID
+      value: 1-Long
+      objectReference: {fileID: 0}
     - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
       propertyPath: m_ObjectPrefabs.Array.size
@@ -9503,6 +9533,11 @@ PrefabInstance:
       objectReference: {fileID: 635857499}
     - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
+      propertyPath: assignedSpawnableID
+      value: 1-Short
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
       propertyPath: m_ObjectPrefabs.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -10064,6 +10099,11 @@ PrefabInstance:
       propertyPath: m_CameraToFace
       value: 
       objectReference: {fileID: 635857499}
+    - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: assignedSpawnableID
+      value: 2-Short
+      objectReference: {fileID: 0}
     - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
       propertyPath: m_ObjectPrefabs.Array.size
@@ -14184,6 +14224,11 @@ PrefabInstance:
       propertyPath: m_CameraToFace
       value: 
       objectReference: {fileID: 635857499}
+    - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: assignedSpawnableID
+      value: 1-Bald
+      objectReference: {fileID: 0}
     - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
       propertyPath: m_ObjectPrefabs.Array.size

@@ -874,13 +874,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5598041546002259474}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 056111519b91b584f823fe54d05312ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 0}
   respawnDelay: 3
+  spawnableID: 1-Short
 --- !u!114 &9122463121193632243
 MonoBehaviour:
   m_ObjectHideFlags: 0

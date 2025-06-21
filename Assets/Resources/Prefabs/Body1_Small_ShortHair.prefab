@@ -988,6 +988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 0}
   respawnDelay: 3
+  spawnableID: Small-short
 --- !u!114 &7160819160224694013
 MonoBehaviour:
   m_ObjectHideFlags: 0

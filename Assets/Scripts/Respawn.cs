@@ -1,21 +1,24 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
-using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 
-internal class Respawn : MonoBehaviour
+[RequireComponent(typeof(XRGrabInteractable))]
+public class Respawn : MonoBehaviour
 {
     public ObjectSpawner spawner;
     public float respawnDelay = 3f;
+    public string spawnableID;
+
     private Vector3 spawnPoint;
     private Vector3 spawnNormal;
+    private Coroutine respawnCoroutine;
 
     private void Awake()
     {
         var grabInteractable = GetComponent<XRGrabInteractable>();
         if (grabInteractable != null)
         {
-            // Create an attach transform that matches the current world pose
             GameObject attachPoint = new GameObject("AttachTransform");
             attachPoint.transform.position = transform.position;
             attachPoint.transform.rotation = transform.rotation;
@@ -26,7 +29,6 @@ internal class Respawn : MonoBehaviour
         }
     }
 
-
     public void SetSpawnPoint(Vector3 point, Vector3 normal)
     {
         spawnPoint = point;
@@ -35,7 +37,6 @@ internal class Respawn : MonoBehaviour
 
     private void OnReleased(SelectExitEventArgs args)
     {
-        // Update attach transform to match current pose
         if (spawner != null && TryGetComponent(out XRGrabInteractable grabInteractable))
         {
             if (grabInteractable.attachTransform != null)
@@ -43,21 +44,24 @@ internal class Respawn : MonoBehaviour
                 grabInteractable.attachTransform.position = transform.position;
                 grabInteractable.attachTransform.rotation = transform.rotation;
             }
-        }
 
-        StartCoroutine(RespawnAfterDelay());
+            if (respawnCoroutine != null)
+                StopCoroutine(respawnCoroutine);
+
+            respawnCoroutine = StartCoroutine(RespawnAfterDelay());
+        }
     }
 
-
-    private System.Collections.IEnumerator RespawnAfterDelay()
+    private IEnumerator RespawnAfterDelay()
     {
         yield return new WaitForSeconds(respawnDelay);
 
-        if (spawner != null)
+        if (spawner != null && !spawner.IsOccupied())
         {
-            // Only try to spawn if the spawner is not currently occupied
-            var spawnSuccess = spawner.TrySpawnObject(spawnPoint, spawnNormal);
-            Debug.Log(spawnSuccess ? "Object respawned." : "Spawner occupied, no respawn.");
+            var success = spawner.TrySpawnObject(spawnPoint, spawnNormal);
+            Debug.Log(success ? "Object respawned." : "Spawner still occupied, no respawn.");
         }
+
+        respawnCoroutine = null;
     }
 }
