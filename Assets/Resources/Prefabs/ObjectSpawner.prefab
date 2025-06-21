@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2481629768977412376}
   - component: {fileID: 1551788490866037068}
   - component: {fileID: 9061472064754297988}
-  - component: {fileID: 2449245684277297206}
   m_Layer: 0
   m_Name: ObjectSpawner
   m_TagString: Untagged
@@ -78,49 +77,3 @@ MonoBehaviour:
   m_SpawnAngleRange: 45
   m_SpawnAsChildren: 0
   interactionManager: {fileID: 0}
---- !u!114 &2449245684277297206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6564475998756657584}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f7b90925e8011b46b35eebd00c5e38d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnSpawnDistanceUpdated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2449245684277297206}
-        m_TargetAssemblyTypeName: XRMultiplayer.NetworkObjectSpawner, VRMP
-        m_MethodName: UpdateDistance
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-  OnSpawnCooldownUpdated:
-    m_PersistentCalls:
-      m_Calls: []
-  OnObjectSpawned:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2449245684277297206}
-        m_TargetAssemblyTypeName: XRMultiplayer.NetworkObjectSpawner, VRMP
-        m_MethodName: ResetDistance
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  fadeRenderer: {fileID: 0}
