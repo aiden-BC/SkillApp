@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2900126870
+  GlobalObjectIdHash: 1821467808
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -448,7 +448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2900126870
+  GlobalObjectIdHash: 2021262928
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 3905668338443459650}
   - component: {fileID: 7440338650606790119}
   - component: {fileID: 8149092669147272717}
-  - component: {fileID: -8644783539869780202}
+  - component: {fileID: -1047290572215537273}
   m_Layer: 0
   m_Name: Body1_Bald
   m_TagString: Untagged
@@ -791,7 +791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2900126870
+  GlobalObjectIdHash: 416623887
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -832,7 +832,7 @@ MonoBehaviour:
   Interpolate: 1
   SlerpPosition: 0
   isServerAuthoritative: 0
---- !u!114 &-8644783539869780202
+--- !u!114 &-1047290572215537273
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -841,7 +841,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5459333351740453496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb1cca572c123384bbcd5da9749cf9b1, type: 3}
+  m_Script: {fileID: 11500000, guid: e06144dec2dcce44ea74dc2ee951a4f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_AllowOverrideOwnership: 0
@@ -879,9 +879,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FoldoutValues: 010101
-  m_AllowCollisionOwnershipExchange: 1
-  m_MinExchangeVelocityMagitude: 0.025
-  spawnLocked: 1
 --- !u!1 &5484778327129511551
 GameObject:
   m_ObjectHideFlags: 0
