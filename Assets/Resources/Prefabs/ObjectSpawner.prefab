@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2481629768977412376}
   - component: {fileID: 1551788490866037068}
   - component: {fileID: 9061472064754297988}
+  - component: {fileID: -7457636103484850847}
+  - component: {fileID: 7707072034893182770}
   m_Layer: 0
   m_Name: ObjectSpawner
   m_TagString: Untagged
@@ -66,14 +68,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2176d32268a770b4da15c9ce7295a45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CameraToFace: {fileID: 0}
   m_ObjectPrefabs:
   - {fileID: 6231902838119152455, guid: cb650b759a34c004ba21a2bcc3cf992c, type: 3}
-  m_SpawnVisualizationPrefab: {fileID: 0}
   m_SpawnOptionIndex: 1
+  m_SpawnAsChildren: 0
+  m_SpawnVisualizationPrefab: {fileID: 0}
   m_OnlySpawnInView: 0
   m_ViewportPeriphery: 0.15
   m_ApplyRandomAngleAtSpawn: 0
   m_SpawnAngleRange: 45
-  m_SpawnAsChildren: 0
   interactionManager: {fileID: 0}
+  m_CameraToFace: {fileID: 0}
+  assignedSpawnableID: 
+--- !u!114 &-7457636103484850847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6564475998756657584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 1914427159
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+--- !u!114 &7707072034893182770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6564475998756657584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f7b90925e8011b46b35eebd00c5e38d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnSpawnDistanceUpdated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSpawnCooldownUpdated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnObjectSpawned:
+    m_PersistentCalls:
+      m_Calls: []
+  fadeRenderer: {fileID: 0}
