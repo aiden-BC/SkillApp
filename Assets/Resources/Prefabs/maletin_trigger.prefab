@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 5651321476814467266}
   - component: {fileID: 8449467277528499662}
   - component: {fileID: -5930971142097780103}
-  - component: {fileID: 4029305514362357}
+  - component: {fileID: 7750935079134557816}
   m_Layer: 0
   m_Name: maletin_trigger
   m_TagString: Untagged
@@ -622,7 +622,7 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &4029305514362357
+--- !u!114 &7750935079134557816
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -631,7 +631,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 586702495637431506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25f7d6f3d19b0524d9be4bc50efbc19a, type: 3}
+  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UseUnreliableDeltas: 0
@@ -653,7 +653,6 @@ MonoBehaviour:
   InLocalSpace: 0
   Interpolate: 1
   SlerpPosition: 0
-  isServerAuthoritative: 0
 --- !u!1 &3885288938710180653
 GameObject:
   m_ObjectHideFlags: 0

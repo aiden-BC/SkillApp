@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using Unity.Netcode;
 
 [RequireComponent(typeof(XRGrabInteractable))]
+[RequireComponent(typeof(NetworkObject))]
 public class HoldableObject : MonoBehaviour
 {
     public bool isAttached = false;
     public IAttachmentOwner currentOwner;
+
     private XRGrabInteractable grabInteractable;
 
     private void Awake()
@@ -24,34 +27,57 @@ public class HoldableObject : MonoBehaviour
 
     private void OnSelectEntered(SelectEnterEventArgs args)
     {
-        if (isAttached)
+        // Transferir ownership al jugador que agarra el objeto
+        var netObj = GetComponent<NetworkObject>();
+        if (netObj != null && netObj.IsSpawned)
         {
-            Debug.Log("Espada agarrada por el jugador. Soltando del personaje.");
-
-            transform.SetParent(null);
-            isAttached = false;
-
-            currentOwner?.StartCooldown(this);
-            currentOwner = null;
+            var interactor = args.interactorObject;
+            var interactorNetObj = interactor.transform.GetComponentInParent<NetworkObject>();
+            if (interactorNetObj != null)
+            {
+                netObj.ChangeOwnership(interactorNetObj.OwnerClientId);
+                Debug.Log($"[HoldableObject] Ownership transferido a {interactorNetObj.OwnerClientId}");
+            }
         }
 
-        // Mientras está agarrada, desactivar física
-        Rigidbody rb = GetComponent<Rigidbody>();
-        if (rb != null)
-        {
-            rb.isKinematic = true;
-            rb.useGravity = false;
-        }
+        // Detener cualquier seguimiento activo
+        ClearAllFollowers();
     }
 
     private void OnSelectExited(SelectExitEventArgs args)
     {
-        // Al soltarla, reactivar física
+        isAttached = false;
+
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb != null)
         {
             rb.isKinematic = false;
             rb.useGravity = true;
+        }
+
+        // Detener seguimiento
+        ClearAllFollowers();
+
+        // Opcional: devolver ownership al servidor
+        var netObj = GetComponent<NetworkObject>();
+        if (netObj != null && netObj.IsSpawned)
+        {
+            netObj.RemoveOwnership();
+        }
+    }
+
+    private void ClearAllFollowers()
+    {
+        var hatFollower = GetComponent<HatFollower>();
+        if (hatFollower != null)
+        {
+            hatFollower.SetFollowTarget(null);
+        }
+
+        var handFollower = GetComponent<HandFollower>();
+        if (handFollower != null)
+        {
+            handFollower.SetFollowTarget(null);
         }
     }
 }

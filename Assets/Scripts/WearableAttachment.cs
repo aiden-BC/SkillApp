@@ -1,8 +1,6 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
-using Unity.Netcode;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class WearableAttachment : MonoBehaviour, IAttachmentOwner
@@ -13,6 +11,7 @@ public class WearableAttachment : MonoBehaviour, IAttachmentOwner
 
     private Dictionary<HoldableObject, float> cooldownTimers = new Dictionary<HoldableObject, float>();
     private HashSet<XRGrabInteractable> registeredInteractables = new HashSet<XRGrabInteractable>();
+    private HoldableObject currentHat = null;
 
     private void Update()
     {
@@ -39,14 +38,15 @@ public class WearableAttachment : MonoBehaviour, IAttachmentOwner
         else if (tag == "HatObject")
         {
             targetTransform = headTransform;
-            Debug.Log("HatObject detected: " + other.name);
+
+            if (currentHat != null && currentHat.isAttached)
+                return;
         }
         else
         {
             return;
         }
 
-        // Verificar si ya hay un objeto en el punto de destino
         if (targetTransform.childCount > 0) return;
 
         HoldableObject holdable = other.GetComponent<HoldableObject>();
@@ -55,7 +55,6 @@ public class WearableAttachment : MonoBehaviour, IAttachmentOwner
         if (holdable == null || grabInteractable == null) return;
         if (cooldownTimers.ContainsKey(holdable)) return;
 
-        // Registrar listeners solo una vez
         if (!registeredInteractables.Contains(grabInteractable))
         {
             grabInteractable.selectEntered.AddListener((args) => DetachIfNeeded(grabInteractable, holdable));
@@ -83,17 +82,23 @@ public class WearableAttachment : MonoBehaviour, IAttachmentOwner
 
             holdable.isAttached = false;
             holdable.currentOwner = null;
+
+            if (currentHat == holdable)
+            {
+                currentHat = null;
+            }
+
+            HatFollower follower = grabInteractable.GetComponent<HatFollower>();
+            if (follower != null)
+            {
+                follower.SetFollowTarget(null);
+            }
         }
     }
 
     private IEnumerator AttachToTargetCoroutine(HoldableObject holdable, XRGrabInteractable grabInteractable, Transform targetTransform)
     {
-        var netObj = grabInteractable.GetComponent<NetworkObject>();
-        if (netObj != null && netObj.enabled && (NetworkManager.Singleton == null || !NetworkManager.Singleton.IsListening))
-        {
-            Debug.LogWarning("Desactivando NetworkObject en tiempo de ejecución para evitar errores.");
-            netObj.enabled = false;
-        }
+        Debug.Log($"Intentando colocar {grabInteractable.name} en {targetTransform.name}");
 
         grabInteractable.enabled = true;
 
@@ -112,12 +117,18 @@ public class WearableAttachment : MonoBehaviour, IAttachmentOwner
 
         grabInteractable.enabled = false;
 
-        grabInteractable.transform.SetParent(targetTransform);
-        grabInteractable.transform.localPosition = Vector3.zero;
-        grabInteractable.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+        grabInteractable.transform.position = targetTransform.position;
+        grabInteractable.transform.rotation = targetTransform.rotation;
+
+        HatFollower follower = grabInteractable.GetComponent<HatFollower>();
+        if (follower != null)
+        {
+            follower.SetFollowTarget(targetTransform);
+        }
 
         holdable.isAttached = true;
         holdable.currentOwner = this;
+        currentHat = holdable;
 
         Rigidbody rb = grabInteractable.GetComponent<Rigidbody>();
         if (rb != null)

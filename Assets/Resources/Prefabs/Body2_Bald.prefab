@@ -547,6 +547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handTransform: {fileID: 3340112602732707}
+  rotateArm: {fileID: 4439987084773841049}
   reattachCooldown: 2
 --- !u!114 &8226246231712050078
 MonoBehaviour:

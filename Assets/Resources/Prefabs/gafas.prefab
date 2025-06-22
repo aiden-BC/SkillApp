@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 4211741181703954500}
   - component: {fileID: -4840087611937539259}
   - component: {fileID: -5034396490304370620}
+  - component: {fileID: 726489818836914670}
   m_Layer: 0
   m_Name: Gafas
   m_TagString: EyesObject
@@ -401,6 +402,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FoldoutValues: 010101
+--- !u!114 &726489818836914670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2671180887714127034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc07951dce60c5e4aa1c6ffb9728ed8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdable: {fileID: 6668855375747607118}
 --- !u!1 &5973451604853135150
 GameObject:
   m_ObjectHideFlags: 0

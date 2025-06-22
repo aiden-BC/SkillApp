@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: -4895293055605400668}
   - component: {fileID: 4397338871961820646}
   - component: {fileID: 5336955422343680632}
+  - component: {fileID: -2375512931442787558}
   m_Layer: 0
   m_Name: Mago
   m_TagString: HatObject
@@ -488,3 +489,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FoldoutValues: 010101
+--- !u!114 &-2375512931442787558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8451808237636536394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc07951dce60c5e4aa1c6ffb9728ed8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdable: {fileID: 7613959625948238922}

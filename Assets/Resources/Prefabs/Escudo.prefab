@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: -7143500075375948620}
   - component: {fileID: -4344690799517205670}
   - component: {fileID: 5042241844348828070}
+  - component: {fileID: 3806221303175618660}
   m_Layer: 0
   m_Name: Escudo
   m_TagString: HoldObject
@@ -488,3 +489,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FoldoutValues: 010101
+--- !u!114 &3806221303175618660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7735886183969953626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18256dd6377594543814689c44b3a903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdable: {fileID: 2136749433615435386}

@@ -522,7 +522,7 @@ GameObject:
   - component: {fileID: 5106911732384098874}
   - component: {fileID: 7999863887478017902}
   - component: {fileID: 3301585448979164995}
-  - component: {fileID: 7821917442232212408}
+  - component: {fileID: 124876940638785193}
   m_Layer: 5
   m_Name: Button-cono
   m_TagString: Untagged
@@ -631,7 +631,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7821917442232212408}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonSpawner, Assembly-CSharp
         m_MethodName: Test
         m_Mode: 1
@@ -643,7 +643,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7821917442232212408
+--- !u!114 &124876940638785193
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -652,7 +652,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 574598779027410413}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46565b550fa42db479b7e668fb3b0743, type: 3}
+  m_Script: {fileID: 11500000, guid: 2de0d0c7e33243440892775bf5edda75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 6161737716152599909}
@@ -669,7 +669,7 @@ GameObject:
   - component: {fileID: 40291940824771440}
   - component: {fileID: 6084859350261087917}
   - component: {fileID: 7627493195599923846}
-  - component: {fileID: 7512106314069636247}
+  - component: {fileID: 3817769188071869605}
   m_Layer: 5
   m_Name: Button-extintor
   m_TagString: Untagged
@@ -778,7 +778,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7512106314069636247}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonSpawner, Assembly-CSharp
         m_MethodName: Test
         m_Mode: 1
@@ -790,7 +790,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7512106314069636247
+--- !u!114 &3817769188071869605
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -799,7 +799,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 597800127982401105}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46565b550fa42db479b7e668fb3b0743, type: 3}
+  m_Script: {fileID: 11500000, guid: 2de0d0c7e33243440892775bf5edda75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 6161737716152599909}
@@ -1038,7 +1038,7 @@ GameObject:
   - component: {fileID: 9015358329520758398}
   - component: {fileID: 6152893295775201495}
   - component: {fileID: 8787404594702209733}
-  - component: {fileID: 1931817895239345965}
+  - component: {fileID: 7515474633687794490}
   m_Layer: 5
   m_Name: Button-espada
   m_TagString: Untagged
@@ -1147,7 +1147,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1931817895239345965}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonSpawner, Assembly-CSharp
         m_MethodName: Test
         m_Mode: 1
@@ -1159,7 +1159,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1931817895239345965
+--- !u!114 &7515474633687794490
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1168,7 +1168,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1069659210055173155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46565b550fa42db479b7e668fb3b0743, type: 3}
+  m_Script: {fileID: 11500000, guid: 2de0d0c7e33243440892775bf5edda75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 6161737716152599909}
@@ -3731,7 +3731,7 @@ GameObject:
   - component: {fileID: 6005735642544752254}
   - component: {fileID: 5315497769484771368}
   - component: {fileID: 1481171454324335310}
-  - component: {fileID: 8670877916402847364}
+  - component: {fileID: 9188203610706294979}
   m_Layer: 5
   m_Name: Button-Escudo
   m_TagString: Untagged
@@ -3840,7 +3840,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8670877916402847364}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonSpawner, Assembly-CSharp
         m_MethodName: Test
         m_Mode: 1
@@ -3852,7 +3852,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8670877916402847364
+--- !u!114 &9188203610706294979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3861,7 +3861,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3155898132498037593}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46565b550fa42db479b7e668fb3b0743, type: 3}
+  m_Script: {fileID: 11500000, guid: 2de0d0c7e33243440892775bf5edda75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 6161737716152599909}
@@ -6202,7 +6202,7 @@ GameObject:
   - component: {fileID: 8568634797223863740}
   - component: {fileID: 3989147792018730002}
   - component: {fileID: 2477846712422460717}
-  - component: {fileID: 2704250202549596806}
+  - component: {fileID: 828450693947562986}
   m_Layer: 5
   m_Name: maletin_UI
   m_TagString: Untagged
@@ -6269,7 +6269,7 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &2704250202549596806
+--- !u!114 &828450693947562986
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6278,7 +6278,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6295546709638797608}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25f7d6f3d19b0524d9be4bc50efbc19a, type: 3}
+  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UseUnreliableDeltas: 0
@@ -6300,7 +6300,6 @@ MonoBehaviour:
   InLocalSpace: 0
   Interpolate: 1
   SlerpPosition: 0
-  isServerAuthoritative: 0
 --- !u!1 &6458946992401568914
 GameObject:
   m_ObjectHideFlags: 0
@@ -6313,7 +6312,7 @@ GameObject:
   - component: {fileID: 2373584723014050546}
   - component: {fileID: 5430619217285059611}
   - component: {fileID: 7615395993722270203}
-  - component: {fileID: 5024289286405916572}
+  - component: {fileID: 3568870330312859102}
   m_Layer: 5
   m_Name: Button-bandera
   m_TagString: Untagged
@@ -6422,7 +6421,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5024289286405916572}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonSpawner, Assembly-CSharp
         m_MethodName: Test
         m_Mode: 1
@@ -6434,7 +6433,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5024289286405916572
+--- !u!114 &3568870330312859102
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6443,7 +6442,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6458946992401568914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46565b550fa42db479b7e668fb3b0743, type: 3}
+  m_Script: {fileID: 11500000, guid: 2de0d0c7e33243440892775bf5edda75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 6161737716152599909}

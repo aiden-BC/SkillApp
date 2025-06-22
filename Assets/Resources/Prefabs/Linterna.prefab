@@ -191,6 +191,7 @@ GameObject:
   - component: {fileID: -6199626428066980125}
   - component: {fileID: -6862376188801201905}
   - component: {fileID: -3567620361137780806}
+  - component: {fileID: 4010991226847807816}
   m_Layer: 0
   m_Name: Linterna
   m_TagString: HoldObject
@@ -574,3 +575,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FoldoutValues: 010101
+--- !u!114 &4010991226847807816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7765296446917316155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18256dd6377594543814689c44b3a903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdable: {fileID: 1724432351549691218}

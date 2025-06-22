@@ -1,19 +1,29 @@
 using System.Collections;
 using UnityEngine;
+using Unity.Netcode;
 
-public class DeleteObject : MonoBehaviour
+public class DeleteObject : NetworkBehaviour
 {
-    [SerializeField] private float delay = 2.0f; // Delay before destruction
+    [SerializeField] private float delay = 2.0f;
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"Object {other.gameObject.name} entered trigger zone.");
-        StartCoroutine(DestroyAfterDelay(other.gameObject));
+        if (!IsServer) return; // Solo el servidor debe ejecutar esto
+
+        NetworkObject netObj = other.GetComponent<NetworkObject>();
+        if (netObj != null && netObj.IsSpawned)
+        {
+            StartCoroutine(DestroyAfterDelay(netObj));
+        }
     }
 
-    private IEnumerator DestroyAfterDelay(GameObject obj)
+    private IEnumerator DestroyAfterDelay(NetworkObject netObj)
     {
         yield return new WaitForSeconds(delay);
-        Destroy(obj);
+
+        if (netObj != null && netObj.IsSpawned)
+        {
+            netObj.Despawn(true); // true = también destruye el GameObject
+        }
     }
 }

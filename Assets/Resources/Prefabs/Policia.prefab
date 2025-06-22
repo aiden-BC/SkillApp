@@ -12,12 +12,14 @@ GameObject:
   - component: {fileID: 3552848774337493678}
   - component: {fileID: 8843851589068306728}
   - component: {fileID: 2248620908599343503}
-  - component: {fileID: 6694961694303179644}
-  - component: {fileID: 4603116239703888806}
-  - component: {fileID: 8169441431245996246}
-  - component: {fileID: -5018039246255175004}
-  - component: {fileID: -8520646559993773215}
-  - component: {fileID: -8651193372704253312}
+  - component: {fileID: 9213312174696638154}
+  - component: {fileID: -8363305428795852896}
+  - component: {fileID: 499524304280276976}
+  - component: {fileID: 540578256627799897}
+  - component: {fileID: 1510413809189380671}
+  - component: {fileID: 8274404464289380678}
+  - component: {fileID: -3704384512520723282}
+  - component: {fileID: 7246930037348482471}
   m_Layer: 0
   m_Name: Policia
   m_TagString: HatObject
@@ -118,7 +120,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5065336, y: 0.34707427, z: 0.59129906}
   m_Center: {x: -0.0016174017, y: 0.14085896, z: 0.035449393}
---- !u!54 &6694961694303179644
+--- !u!54 &9213312174696638154
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,7 +147,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4603116239703888806
+--- !u!114 &-8363305428795852896
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -267,7 +269,30 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
---- !u!114 &8169441431245996246
+--- !u!114 &499524304280276976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4785108480453600393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a1302d0d134fa8a2a5b3bf4aec3c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PermittedDisplacementAxes: -1
+  m_ConstrainedAxisDisplacementMode: 1
+  m_TwoHandedRotationMode: 1
+  m_AllowOneHandedScaling: 1
+  m_AllowTwoHandedScaling: 0
+  m_OneHandedScaleSpeed: 0.5
+  m_ThresholdMoveRatioForScale: 0.05
+  m_ClampScaling: 1
+  m_MinimumScaleRatio: 0.25
+  m_MaximumScaleRatio: 2
+  m_ScaleMultiplier: 0.25
+--- !u!114 &540578256627799897
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -280,7 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAttached: 0
---- !u!114 &-5018039246255175004
+--- !u!114 &1510413809189380671
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -292,7 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 417798911
+  GlobalObjectIdHash: 1531112340
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -301,7 +326,7 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &-8520646559993773215
+--- !u!114 &8274404464289380678
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -333,7 +358,7 @@ MonoBehaviour:
   Interpolate: 1
   SlerpPosition: 0
   isServerAuthoritative: 0
---- !u!114 &-8651193372704253312
+--- !u!114 &-3704384512520723282
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -380,3 +405,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FoldoutValues: 010101
+--- !u!114 &7246930037348482471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4785108480453600393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc07951dce60c5e4aa1c6ffb9728ed8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdable: {fileID: 540578256627799897}

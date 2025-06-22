@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: -1834862894825499109}
   - component: {fileID: -246494741425105373}
   - component: {fileID: 4031896611860479219}
+  - component: {fileID: 3618787745873087468}
   m_Layer: 0
   m_Name: Guerrero
   m_TagString: HatObject
@@ -400,3 +401,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FoldoutValues: 010101
+--- !u!114 &3618787745873087468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975487490183259233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc07951dce60c5e4aa1c6ffb9728ed8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdable: {fileID: 6141961137396927306}
