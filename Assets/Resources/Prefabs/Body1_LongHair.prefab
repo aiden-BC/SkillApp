@@ -123,7 +123,7 @@ Transform:
   m_GameObject: {fileID: 820553946016239600}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0002, y: 0.0551, z: -0.0031}
+  m_LocalPosition: {x: 0.0002, y: 0.059, z: -0.0031}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1279,7 +1279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aefc341689f9049419e5bdc27ca12d48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handTransform: {fileID: 0}
+  handTransform: {fileID: 2152661498822503269}
   reattachCooldown: 2
 --- !u!114 &546924572279719840
 MonoBehaviour:
@@ -1294,7 +1294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eyesTransform: {fileID: 7640102091698668169}
-  headTransform: {fileID: 0}
+  headTransform: {fileID: 7894445398965455732}
   reattachCooldown: 1
 --- !u!1 &7342039186863346115
 GameObject:

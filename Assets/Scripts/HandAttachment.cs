@@ -28,6 +28,9 @@ public class HandAttachment : MonoBehaviour, IAttachmentOwner
     {
         if (!other.CompareTag("HoldObject")) return;
 
+        // Verificar si ya hay un objeto en la mano
+        if (handTransform.childCount > 0) return;
+
         HoldableObject holdable = other.GetComponent<HoldableObject>();
         XRGrabInteractable grabInteractable = other.GetComponent<XRGrabInteractable>();
 
@@ -44,6 +47,7 @@ public class HandAttachment : MonoBehaviour, IAttachmentOwner
             StartCoroutine(AttachToHandCoroutine(holdable, grabInteractable));
         }
     }
+
 
     private IEnumerator AttachToHandCoroutine(HoldableObject holdable, XRGrabInteractable grabInteractable)
     {

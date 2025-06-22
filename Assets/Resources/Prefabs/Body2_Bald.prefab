@@ -575,7 +575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eyesTransform: {fileID: 7564950570070682014}
-  headTransform: {fileID: 0}
+  headTransform: {fileID: 1618308275646788223}
   reattachCooldown: 1
 --- !u!1 &4277932285014593276
 GameObject:

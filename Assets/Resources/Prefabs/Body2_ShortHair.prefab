@@ -477,7 +477,7 @@ Transform:
   m_GameObject: {fileID: 3968451702083336766}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0002, y: 0.0551, z: -0.0031}
+  m_LocalPosition: {x: 0.0002, y: 0.0574, z: -0.0028}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1262,7 +1262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eyesTransform: {fileID: 2707567252244921100}
-  headTransform: {fileID: 0}
+  headTransform: {fileID: 3165177807150451442}
   reattachCooldown: 1
 --- !u!1 &7693677376570388423
 GameObject:

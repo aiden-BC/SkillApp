@@ -1116,7 +1116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aefc341689f9049419e5bdc27ca12d48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handTransform: {fileID: 0}
+  handTransform: {fileID: 7430132790636548393}
   reattachCooldown: 2
 --- !u!114 &2671317352800852137
 MonoBehaviour:
@@ -1131,7 +1131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eyesTransform: {fileID: 3719123408921675064}
-  headTransform: {fileID: 0}
+  headTransform: {fileID: 2167337773391369158}
   reattachCooldown: 1
 --- !u!1 &7618516301949460993
 GameObject:
@@ -1295,8 +1295,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0696981, y: 0.13233173, z: 0.0465404}
-  m_Center: {x: -0.0010627285, y: -0.042785943, z: -0.0009394735}
+  m_Size: {x: 0.0696981, y: 0.1093493, z: 0.046540394}
+  m_Center: {x: -0.0010627296, y: -0.05427717, z: -0.00093947304}
 --- !u!1 &7847096651103878098
 GameObject:
   m_ObjectHideFlags: 0

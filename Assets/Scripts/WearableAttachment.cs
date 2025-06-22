@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class WearableAttachment : MonoBehaviour, IAttachmentOwner
@@ -11,6 +12,7 @@ public class WearableAttachment : MonoBehaviour, IAttachmentOwner
     public float reattachCooldown = 1.0f;
 
     private Dictionary<HoldableObject, float> cooldownTimers = new Dictionary<HoldableObject, float>();
+    private HashSet<XRGrabInteractable> registeredInteractables = new HashSet<XRGrabInteractable>();
 
     private void Update()
     {
@@ -44,11 +46,22 @@ public class WearableAttachment : MonoBehaviour, IAttachmentOwner
             return;
         }
 
+        // Verificar si ya hay un objeto en el punto de destino
+        if (targetTransform.childCount > 0) return;
+
         HoldableObject holdable = other.GetComponent<HoldableObject>();
         XRGrabInteractable grabInteractable = other.GetComponent<XRGrabInteractable>();
 
         if (holdable == null || grabInteractable == null) return;
         if (cooldownTimers.ContainsKey(holdable)) return;
+
+        // Registrar listeners solo una vez
+        if (!registeredInteractables.Contains(grabInteractable))
+        {
+            grabInteractable.selectEntered.AddListener((args) => DetachIfNeeded(grabInteractable, holdable));
+            grabInteractable.selectExited.AddListener((args) => DetachIfNeeded(grabInteractable, holdable));
+            registeredInteractables.Add(grabInteractable);
+        }
 
         if (!holdable.isAttached)
         {
@@ -56,9 +69,25 @@ public class WearableAttachment : MonoBehaviour, IAttachmentOwner
         }
     }
 
+    private void DetachIfNeeded(XRGrabInteractable grabInteractable, HoldableObject holdable)
+    {
+        if (grabInteractable.transform.parent == eyesTransform || grabInteractable.transform.parent == headTransform)
+        {
+            grabInteractable.transform.SetParent(null);
+
+            Rigidbody rb = grabInteractable.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.isKinematic = false;
+            }
+
+            holdable.isAttached = false;
+            holdable.currentOwner = null;
+        }
+    }
+
     private IEnumerator AttachToTargetCoroutine(HoldableObject holdable, XRGrabInteractable grabInteractable, Transform targetTransform)
     {
-        // Desactiva NetworkObject si no estás en red
         var netObj = grabInteractable.GetComponent<NetworkObject>();
         if (netObj != null && netObj.enabled && (NetworkManager.Singleton == null || !NetworkManager.Singleton.IsListening))
         {
@@ -99,7 +128,6 @@ public class WearableAttachment : MonoBehaviour, IAttachmentOwner
         yield return new WaitForSeconds(0.5f);
         grabInteractable.enabled = true;
     }
-
 
     public void StartCooldown(HoldableObject holdable)
     {

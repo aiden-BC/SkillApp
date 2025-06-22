@@ -826,8 +826,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.12734103, y: 0.23711629, z: 0.13634472}
+  m_Center: {x: 0.003933963, y: 0.087260574, z: -0.0022631034}
 --- !u!114 &6125185866391185444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1036,7 +1036,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eyesTransform: {fileID: 9056513983663903617}
-  headTransform: {fileID: 0}
+  headTransform: {fileID: 4017540979409915558}
   reattachCooldown: 1
 --- !u!1 &6094801450668726057
 GameObject:
@@ -1262,8 +1262,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0696981, y: 0.13018739, z: 0.0465404}
-  m_Center: {x: -0.0010627285, y: -0.04385811, z: -0.0009394735}
+  m_Size: {x: 0.0696981, y: 0.11341208, z: 0.046540394}
+  m_Center: {x: -0.0010627296, y: -0.052245762, z: -0.00093947304}
 --- !u!1 &7785536343153346298
 GameObject:
   m_ObjectHideFlags: 0
