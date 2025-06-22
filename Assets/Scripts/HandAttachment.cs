@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class HandAttachment : MonoBehaviour, IAttachmentOwner
@@ -9,10 +10,10 @@ public class HandAttachment : MonoBehaviour, IAttachmentOwner
     public float reattachCooldown = 2.0f;
 
     private Dictionary<HoldableObject, float> cooldownTimers = new Dictionary<HoldableObject, float>();
+    private HashSet<XRGrabInteractable> registeredInteractables = new HashSet<XRGrabInteractable>();
 
     private void Update()
     {
-        // Actualizar los cooldowns
         List<HoldableObject> keys = new List<HoldableObject>(cooldownTimers.Keys);
         foreach (var obj in keys)
         {
@@ -39,6 +40,14 @@ public class HandAttachment : MonoBehaviour, IAttachmentOwner
         // Si está en cooldown, no hacer nada
         if (cooldownTimers.ContainsKey(holdable)) return;
 
+        // Registrar listeners solo una vez
+        if (!registeredInteractables.Contains(grabInteractable))
+        {
+            grabInteractable.selectEntered.AddListener((args) => DetachIfNeeded(grabInteractable, holdable));
+            grabInteractable.selectExited.AddListener((args) => DetachIfNeeded(grabInteractable, holdable));
+            registeredInteractables.Add(grabInteractable);
+        }
+
         RotateArm rotateArm = GetComponent<RotateArm>();
         rotateArm.rotateHold();
 
@@ -48,6 +57,22 @@ public class HandAttachment : MonoBehaviour, IAttachmentOwner
         }
     }
 
+    private void DetachIfNeeded(XRGrabInteractable grabInteractable, HoldableObject holdable)
+    {
+        if (grabInteractable.transform.parent == handTransform)
+        {
+            grabInteractable.transform.SetParent(null);
+
+            Rigidbody rb = grabInteractable.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.isKinematic = false;
+            }
+
+            holdable.isAttached = false;
+            holdable.currentOwner = null;
+        }
+    }
 
     private IEnumerator AttachToHandCoroutine(HoldableObject holdable, XRGrabInteractable grabInteractable)
     {
