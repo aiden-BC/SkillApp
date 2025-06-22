@@ -894,10 +894,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5467de1caabff418c62214b93238f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upperArmBone: {fileID: 4028723546082443819, guid: 19d62ec038e725840b860e7ef3b5844b,
-    type: 3}
-  lowerArmBone: {fileID: 1925362755820876831, guid: 19d62ec038e725840b860e7ef3b5844b,
-    type: 3}
+  upperArmBone: {fileID: 1910820363302743941}
+  lowerArmBone: {fileID: 8313460905441760076}
   upperArmExtendedRotation: {x: 16.857, y: 51.756, z: 63.413}
   lowerArmExtendedRotation: {x: 35.585, y: 26.114, z: 37.393}
   upperArmDefaultRotation: {x: 9.689, y: -3.005, z: 54.965}
@@ -988,7 +986,7 @@ Transform:
   m_GameObject: {fileID: 6228664985861288661}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0.0143, y: 0.0533, z: 0.0225}
+  m_LocalPosition: {x: 0.0142, y: 0.0533, z: 0.0225}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

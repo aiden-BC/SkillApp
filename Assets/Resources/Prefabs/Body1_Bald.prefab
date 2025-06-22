@@ -152,7 +152,7 @@ Transform:
   m_GameObject: {fileID: 1943037122018501004}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0.0533, z: 0.0225}
+  m_LocalPosition: {x: 0.0142, y: 0.0533, z: 0.0225}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1064,14 +1064,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6353536558587819493}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.35091826, y: 0.108343, z: 0.23193987, w: 0.9007342}
+  m_LocalRotation: {x: 0.035808593, y: 0.072954476, z: 0.083191924, w: 0.99321425}
   m_LocalPosition: {x: -0.0000000016374583, y: 0.026343685, z: -2.787163e-10}
   m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1239895730091178029}
   m_Father: {fileID: 4028723546082443819}
-  m_LocalEulerAnglesHint: {x: -9.991, y: 2.702, z: 21.088}
+  m_LocalEulerAnglesHint: {x: 9.457, y: -18.517, z: 19.398}
 --- !u!1 &6991415016137085297
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,14 +1162,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7902830177329987272}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.33910492, y: 0.29799497, z: 0.41333422, w: 0.7907981}
+  m_LocalRotation: {x: 0.0628388, y: -0.06213773, z: 0.46163547, w: 0.8826568}
   m_LocalPosition: {x: 0.0000000023679998, y: 0.017749727, z: -5.574326e-10}
   m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1925362755820876831}
   m_Father: {fileID: 669970032139551866}
-  m_LocalEulerAnglesHint: {x: 9.81, y: 7.442, z: 52.698}
+  m_LocalEulerAnglesHint: {x: 10.421, y: 9.588, z: 55.481}
 --- !u!1 &8025750585501757487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,14 +1294,14 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0696981, y: 0.13231719, z: 0.036699515}
-  m_Center: {x: -0.0010627285, y: -0.042793214, z: -0.0058599175}
+  m_Size: {x: 0.0696981, y: 0.12491867, z: 0.036699515}
+  m_Center: {x: -0.0010627285, y: -0.046492472, z: -0.005859917}
 --- !u!1 &8070391436861618041
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -1004192105186172291}
   - component: {fileID: 6141961137396927306}
   m_Layer: 0
-  m_Name: Caballero
+  m_Name: Guerrero
   m_TagString: HatObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,8 +32,8 @@ Transform:
   m_GameObject: {fileID: 975487490183259233}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.9319, y: 1.3493, z: -6.499}
-  m_LocalScale: {x: 0.27932826, y: 0.25708827, z: 0.27079034}
+  m_LocalPosition: {x: -1.931, y: 1.3479, z: -6.499}
+  m_LocalScale: {x: 0.30566892, y: 0.28133172, z: 0.29632586}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

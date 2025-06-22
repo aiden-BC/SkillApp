@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -37,7 +37,7 @@ public class HandAttachment : MonoBehaviour, IAttachmentOwner
 
         if (holdable == null || grabInteractable == null) return;
 
-        // Si est· en cooldown, no hacer nada
+        // Si est√° en cooldown, no hacer nada
         if (cooldownTimers.ContainsKey(holdable)) return;
 
         // Registrar listeners solo una vez
@@ -47,9 +47,6 @@ public class HandAttachment : MonoBehaviour, IAttachmentOwner
             grabInteractable.selectExited.AddListener((args) => DetachIfNeeded(grabInteractable, holdable));
             registeredInteractables.Add(grabInteractable);
         }
-
-        RotateArm rotateArm = GetComponent<RotateArm>();
-        rotateArm.rotateHold();
 
         if (!holdable.isAttached)
         {
@@ -78,7 +75,7 @@ public class HandAttachment : MonoBehaviour, IAttachmentOwner
     {
         grabInteractable.enabled = true;
 
-        // Forzar soltado si est· agarrado
+        // Forzar soltado si est√° agarrado
         if (grabInteractable.isSelected)
         {
             var interactor = grabInteractable.firstInteractorSelecting;
@@ -92,6 +89,10 @@ public class HandAttachment : MonoBehaviour, IAttachmentOwner
             yield return null;
         }
 
+        // Rotar el brazo justo despu√©s de acoplar el objeto
+        RotateArm rotateArm = GetComponent<RotateArm>();
+        rotateArm.rotateHold();
+
         // Desactivar temporalmente el interactable
         grabInteractable.enabled = false;
 
@@ -103,7 +104,7 @@ public class HandAttachment : MonoBehaviour, IAttachmentOwner
         holdable.isAttached = true;
         holdable.currentOwner = this;
 
-        // Desactivar fÌsica
+        // Desactivar f√≠sica
         Rigidbody rb = grabInteractable.GetComponent<Rigidbody>();
         if (rb != null)
         {
