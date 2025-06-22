@@ -1018,13 +1018,13 @@ GameObject:
   - component: {fileID: 3266171278342324765}
   - component: {fileID: 9076182674791789661}
   - component: {fileID: 748740030617861222}
-  - component: {fileID: 3462149010614969918}
   - component: {fileID: 4786750178955573805}
   - component: {fileID: 3383540843402786782}
   - component: {fileID: 2266093945544030426}
   - component: {fileID: 9048710243349010618}
   - component: {fileID: 2504766601153154316}
   - component: {fileID: 5779283653209081721}
+  - component: {fileID: 1404131687710096505}
   m_Layer: 0
   m_Name: Body2_LongHair
   m_TagString: Untagged
@@ -1266,21 +1266,6 @@ MonoBehaviour:
   m_MinimumScaleRatio: 0.25
   m_MaximumScaleRatio: 2
   m_ScaleMultiplier: 0.25
---- !u!114 &3462149010614969918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6583708290207545341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 056111519b91b584f823fe54d05312ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawner: {fileID: 0}
-  respawnDelay: 3
-  spawnableID: 2-Long
 --- !u!114 &4786750178955573805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1430,6 +1415,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FoldoutValues: 010101
+--- !u!114 &1404131687710096505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6583708290207545341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f80a64d104afe49b23cf15d0637433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 0}
+  respawnDelay: 3
+  spawnableID: 2-Long
 --- !u!1 &7196764743888360175
 GameObject:
   m_ObjectHideFlags: 0

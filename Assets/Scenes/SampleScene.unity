@@ -653,6 +653,22 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.04624343
       objectReference: {fileID: 0}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: m_CameraToFace
+      value: 
+      objectReference: {fileID: 635857499}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: assignedSpawnableID
+      value: 2-Bald
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: 'm_ObjectPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4114577457600439974, guid: da1195de2725f874ea20e8627a5dc77e,
+        type: 3}
     - target: {fileID: 2481629768977412376, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -707,6 +723,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ObjectSpawnerCharacter2-Bald
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564475998756657584, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
@@ -985,6 +1006,22 @@ PrefabInstance:
       propertyPath: InScenePlacedSourceGlobalObjectIdHash
       value: 1914427159
       objectReference: {fileID: 0}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: m_CameraToFace
+      value: 
+      objectReference: {fileID: 635857499}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: assignedSpawnableID
+      value: Small-Bald
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: 'm_ObjectPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8437617303787577458, guid: 4655c599a49d1e44e8a06adf2ad8ff84,
+        type: 3}
     - target: {fileID: 2481629768977412376, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1987,6 +2024,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 874452183138526564, guid: 3967f87296c892e40b57e37bc8601550,
+        type: 3}
+      propertyPath: m_NetworkConfig.Prefabs.NetworkPrefabsLists.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 874452183138526564, guid: 3967f87296c892e40b57e37bc8601550,
+        type: 3}
+      propertyPath: 'm_NetworkConfig.Prefabs.NetworkPrefabsLists.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f1b0013c7047f324ab2abd691abac739,
+        type: 2}
     - target: {fileID: 4145292139985048678, guid: 3967f87296c892e40b57e37bc8601550,
         type: 3}
       propertyPath: m_RootOrder
@@ -2475,6 +2523,22 @@ PrefabInstance:
       propertyPath: InScenePlacedSourceGlobalObjectIdHash
       value: 1914427159
       objectReference: {fileID: 0}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: m_CameraToFace
+      value: 
+      objectReference: {fileID: 635857499}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: assignedSpawnableID
+      value: Small-Short
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: 'm_ObjectPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5735800926940262736, guid: fbaaf1b082b257148ad9ef9fa3ec2425,
+        type: 3}
     - target: {fileID: 2481629768977412376, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -5034,6 +5098,22 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.07781625
       objectReference: {fileID: 0}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: m_CameraToFace
+      value: 
+      objectReference: {fileID: 635857499}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: assignedSpawnableID
+      value: 2-Long
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: 'm_ObjectPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 6583708290207545341, guid: d8459cdbd8cd56f48bda64f5e8708fdb,
+        type: 3}
     - target: {fileID: 2481629768977412376, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5088,6 +5168,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ObjectSpawnerCharacter2-LongHair
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564475998756657584, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
@@ -5231,7 +5316,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &868261974
 Transform:
   m_ObjectHideFlags: 0
@@ -8157,6 +8242,22 @@ PrefabInstance:
       propertyPath: InScenePlacedSourceGlobalObjectIdHash
       value: 1914427159
       objectReference: {fileID: 0}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: m_CameraToFace
+      value: 
+      objectReference: {fileID: 635857499}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: assignedSpawnableID
+      value: Small-Long
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: 'm_ObjectPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7220333485539538263, guid: d6eee84911828244393aa467d8cbf2c4,
+        type: 3}
     - target: {fileID: 2481629768977412376, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -8786,6 +8887,22 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.01834011
       objectReference: {fileID: 0}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: m_CameraToFace
+      value: 
+      objectReference: {fileID: 635857499}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: assignedSpawnableID
+      value: 1-Long
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: 'm_ObjectPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7182053517079864544, guid: e73304f4d569c314eb391aaebeeb3f3f,
+        type: 3}
     - target: {fileID: 2481629768977412376, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8840,6 +8957,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ObjectSpawnerCharacter1-LongHair
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564475998756657584, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
@@ -10064,6 +10186,22 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.010472536
       objectReference: {fileID: 0}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: m_CameraToFace
+      value: 
+      objectReference: {fileID: 635857499}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: assignedSpawnableID
+      value: 1-Short
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: 'm_ObjectPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5598041546002259474, guid: 70ca80cfa8cb85f40bafa16a458eea5b,
+        type: 3}
     - target: {fileID: 2481629768977412376, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10118,6 +10256,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ObjectSpawnerCharacter1-ShortHair
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564475998756657584, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
@@ -10637,6 +10780,22 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.009138584
       objectReference: {fileID: 0}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: m_CameraToFace
+      value: 
+      objectReference: {fileID: 635857499}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: assignedSpawnableID
+      value: 2-Short
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: 'm_ObjectPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7379668062678922236, guid: 4af0ce703c2825e43a88d6176500c6ca,
+        type: 3}
     - target: {fileID: 2481629768977412376, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10691,6 +10850,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ObjectSpawnerCharacter2-ShortHair
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564475998756657584, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
@@ -12652,27 +12816,27 @@ PrefabInstance:
     - target: {fileID: 115189853331879042, guid: 95bd29654e15ad844be6210374a75967,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 115189853331879042, guid: 95bd29654e15ad844be6210374a75967,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 115189853331879042, guid: 95bd29654e15ad844be6210374a75967,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 320
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 115189853331879042, guid: 95bd29654e15ad844be6210374a75967,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 160
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 115189853331879042, guid: 95bd29654e15ad844be6210374a75967,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 185451237926514589, guid: 95bd29654e15ad844be6210374a75967,
         type: 3}
@@ -12762,12 +12926,12 @@ PrefabInstance:
     - target: {fileID: 4901550941262174682, guid: 95bd29654e15ad844be6210374a75967,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4901550941262174682, guid: 95bd29654e15ad844be6210374a75967,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5512649697841535006, guid: 95bd29654e15ad844be6210374a75967,
         type: 3}
@@ -12792,27 +12956,27 @@ PrefabInstance:
     - target: {fileID: 6437772399763460440, guid: 95bd29654e15ad844be6210374a75967,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6437772399763460440, guid: 95bd29654e15ad844be6210374a75967,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6437772399763460440, guid: 95bd29654e15ad844be6210374a75967,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 320
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6437772399763460440, guid: 95bd29654e15ad844be6210374a75967,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 160
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6437772399763460440, guid: 95bd29654e15ad844be6210374a75967,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -102
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6989566360012644738, guid: 95bd29654e15ad844be6210374a75967,
         type: 3}
@@ -12947,7 +13111,7 @@ PrefabInstance:
     - target: {fileID: 8649813874991662234, guid: 95bd29654e15ad844be6210374a75967,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 132
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8769490601588493923, guid: 95bd29654e15ad844be6210374a75967,
         type: 3}
@@ -15722,6 +15886,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7457636103484850847, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7457636103484850847, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
       propertyPath: GlobalObjectIdHash
       value: 2019317188
       objectReference: {fileID: 0}
@@ -15760,6 +15929,11 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.0023527145
       objectReference: {fileID: 0}
+    - target: {fileID: 2170743698051255544, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: m_CameraToFace
+      value: 
+      objectReference: {fileID: 635857499}
     - target: {fileID: 2481629768977412376, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15815,27 +15989,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectSpawnerCharacter1-Bald
       objectReference: {fileID: 0}
+    - target: {fileID: 7707072034893182770, guid: 675866cad4b8e6140bde75b249f5ad6c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
         type: 3}
       propertyPath: m_CameraToFace
       value: 
       objectReference: {fileID: 635857499}
-    - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
-        type: 3}
-      propertyPath: assignedSpawnableID
-      value: 1-Bald
-      objectReference: {fileID: 0}
-    - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
-        type: 3}
-      propertyPath: m_ObjectPrefabs.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9061472064754297988, guid: 675866cad4b8e6140bde75b249f5ad6c,
-        type: 3}
-      propertyPath: 'm_ObjectPrefabs.Array.data[0]'
-      value: 
-      objectReference: {fileID: 5459333351740453496, guid: 19d62ec038e725840b860e7ef3b5844b,
-        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
