@@ -1635,7 +1635,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2482887352832196617}
-  - component: {fileID: 1891602805733162375}
+  - component: {fileID: 2330090475377510482}
   m_Layer: 5
   m_Name: Dinero
   m_TagString: Untagged
@@ -1665,7 +1665,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1891602805733162375
+--- !u!114 &2330090475377510482
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1674,11 +1674,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1147839882488376963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46565b550fa42db479b7e668fb3b0743, type: 3}
+  m_Script: {fileID: 11500000, guid: 2de0d0c7e33243440892775bf5edda75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 6161737716152599909}
-  prefabFolder: Prefabs
+  prefabFolder: Assets/Resources/Prefabs/Objects
 --- !u!1 &1291830299081315602
 GameObject:
   m_ObjectHideFlags: 0
@@ -2269,7 +2269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5595229723514104799}
-  - component: {fileID: 5290042680426210610}
+  - component: {fileID: 5723425778887682685}
   m_Layer: 5
   m_Name: Extintor
   m_TagString: Untagged
@@ -2299,7 +2299,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5290042680426210610
+--- !u!114 &5723425778887682685
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2308,11 +2308,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1794541174327565843}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46565b550fa42db479b7e668fb3b0743, type: 3}
+  m_Script: {fileID: 11500000, guid: 2de0d0c7e33243440892775bf5edda75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 6161737716152599909}
-  prefabFolder: Prefabs
+  prefabFolder: Assets/Resources/Prefabs/Objects
 --- !u!1 &2019335512140310077
 GameObject:
   m_ObjectHideFlags: 0
@@ -3476,7 +3476,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6350780230423208724}
-  - component: {fileID: 2155073544993683042}
+  - component: {fileID: 2250339916031270209}
   m_Layer: 5
   m_Name: Portatil
   m_TagString: Untagged
@@ -3506,7 +3506,7 @@ RectTransform:
   m_AnchoredPosition: {x: 85, y: -40}
   m_SizeDelta: {x: 20, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2155073544993683042
+--- !u!114 &2250339916031270209
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3515,11 +3515,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2828066045835022598}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46565b550fa42db479b7e668fb3b0743, type: 3}
+  m_Script: {fileID: 11500000, guid: 2de0d0c7e33243440892775bf5edda75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 6161737716152599909}
-  prefabFolder: Prefabs
+  prefabFolder: Assets/Resources/Prefabs/Objects
 --- !u!1 &2968472194929985937
 GameObject:
   m_ObjectHideFlags: 0
@@ -4336,7 +4336,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7799101834175632998}
-  - component: {fileID: 3605994343790166201}
+  - component: {fileID: 6566359789793579294}
   m_Layer: 5
   m_Name: Espada
   m_TagString: Untagged
@@ -4366,7 +4366,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3605994343790166201
+--- !u!114 &6566359789793579294
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4375,11 +4375,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3783010191089566442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46565b550fa42db479b7e668fb3b0743, type: 3}
+  m_Script: {fileID: 11500000, guid: 2de0d0c7e33243440892775bf5edda75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 6161737716152599909}
-  prefabFolder: Prefabs
+  prefabFolder: Assets/Resources/Prefabs/Objects
 --- !u!1 &3832250005296963147
 GameObject:
   m_ObjectHideFlags: 0
@@ -5244,7 +5244,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 837675050447294181}
-  - component: {fileID: 6473619407272508478}
+  - component: {fileID: 6402518756537394055}
   m_Layer: 5
   m_Name: Gato
   m_TagString: Untagged
@@ -5274,7 +5274,7 @@ RectTransform:
   m_AnchoredPosition: {x: 10, y: -5}
   m_SizeDelta: {x: 20, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6473619407272508478
+--- !u!114 &6402518756537394055
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5283,11 +5283,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4820570759800392411}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46565b550fa42db479b7e668fb3b0743, type: 3}
+  m_Script: {fileID: 11500000, guid: 2de0d0c7e33243440892775bf5edda75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 6161737716152599909}
-  prefabFolder: Resources/Prefabs/Objects
+  spawnPoint: {fileID: 0}
+  prefabFolder: Assets/Resources/Prefabs/Objects
 --- !u!1 &4955074190581989895
 GameObject:
   m_ObjectHideFlags: 0
@@ -5297,7 +5297,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4266431107735674191}
-  - component: {fileID: 3528451164869650176}
+  - component: {fileID: 7464684790766640020}
   m_Layer: 5
   m_Name: Bandera
   m_TagString: Untagged
@@ -5327,7 +5327,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3528451164869650176
+--- !u!114 &7464684790766640020
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5336,7 +5336,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4955074190581989895}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46565b550fa42db479b7e668fb3b0743, type: 3}
+  m_Script: {fileID: 11500000, guid: 2de0d0c7e33243440892775bf5edda75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 6161737716152599909}
@@ -5777,7 +5777,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4086793228713995355}
-  - component: {fileID: 4816192305676858446}
+  - component: {fileID: 5916020063655211365}
   m_Layer: 5
   m_Name: Escudo
   m_TagString: Untagged
@@ -5807,7 +5807,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4816192305676858446
+--- !u!114 &5916020063655211365
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5816,11 +5816,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5700663763666783864}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46565b550fa42db479b7e668fb3b0743, type: 3}
+  m_Script: {fileID: 11500000, guid: 2de0d0c7e33243440892775bf5edda75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 6161737716152599909}
-  prefabFolder: Prefabs
+  prefabFolder: Assets/Resources/Prefabs/Objects
 --- !u!1 &5852248911875497317
 GameObject:
   m_ObjectHideFlags: 0
@@ -5966,7 +5966,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5530853035674522347}
-  - component: {fileID: 5189993904346788082}
+  - component: {fileID: 4955694550823976519}
   m_Layer: 5
   m_Name: Cono
   m_TagString: Untagged
@@ -5996,7 +5996,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5189993904346788082
+--- !u!114 &4955694550823976519
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6005,11 +6005,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5925433123573739368}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46565b550fa42db479b7e668fb3b0743, type: 3}
+  m_Script: {fileID: 11500000, guid: 2de0d0c7e33243440892775bf5edda75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 6161737716152599909}
-  prefabFolder: Prefabs
+  prefabFolder: Assets/Resources/Prefabs/Objects
 --- !u!1 &5999028075264923408
 GameObject:
   m_ObjectHideFlags: 0
@@ -7009,7 +7009,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8453725473223670230}
-  - component: {fileID: 1626488951327068731}
+  - component: {fileID: 3860159144033215717}
   m_Layer: 5
   m_Name: Calavera
   m_TagString: Untagged
@@ -7039,7 +7039,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1626488951327068731
+--- !u!114 &3860159144033215717
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7048,7 +7048,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7361298863392604935}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46565b550fa42db479b7e668fb3b0743, type: 3}
+  m_Script: {fileID: 11500000, guid: 2de0d0c7e33243440892775bf5edda75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 6161737716152599909}
@@ -7783,7 +7783,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2648870400780027867}
-  - component: {fileID: 4109657406060654116}
+  - component: {fileID: 6393428073368152093}
   m_Layer: 5
   m_Name: Fuego
   m_TagString: Untagged
@@ -7813,7 +7813,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4109657406060654116
+--- !u!114 &6393428073368152093
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7822,11 +7822,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8543960642750476225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46565b550fa42db479b7e668fb3b0743, type: 3}
+  m_Script: {fileID: 11500000, guid: 2de0d0c7e33243440892775bf5edda75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 6161737716152599909}
-  prefabFolder: Prefabs
+  prefabFolder: Assets/Resources/Prefabs/Objects
 --- !u!1 &8612598671408634184
 GameObject:
   m_ObjectHideFlags: 0

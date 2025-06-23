@@ -962,6 +962,7 @@ GameObject:
   - component: {fileID: 4188889902799716083}
   - component: {fileID: -7506807973789780940}
   - component: {fileID: -8569190913153715767}
+  - component: {fileID: -6357514084557089946}
   m_Layer: 0
   m_Name: Body2_ShortHair
   m_TagString: Untagged
@@ -1366,6 +1367,18 @@ MonoBehaviour:
   spawner: {fileID: 0}
   respawnDelay: 3
   spawnableID: 2-Short
+--- !u!114 &-6357514084557089946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7379668062678922236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c92a50d04576914c9476f9ea0a9c6ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7693677376570388423
 GameObject:
   m_ObjectHideFlags: 0

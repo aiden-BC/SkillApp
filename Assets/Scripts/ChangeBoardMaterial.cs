@@ -1,8 +1,9 @@
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
-public class ChangeBoardMaterial : MonoBehaviour
+public class ChangeBoardMaterial : NetworkBehaviour
 {
     public Renderer boardPlane;      // El plano grande
     public Material newMaterial;     // Material que se aplicará

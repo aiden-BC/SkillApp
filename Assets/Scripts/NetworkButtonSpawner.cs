@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class NetworkButtonSpawner : NetworkBehaviour
 {
     public Transform spawnPoint;
-    public string prefabFolder = "Prefabs";
+    public string prefabFolder;
 
     private void Awake()
     {
@@ -20,11 +20,8 @@ public class NetworkButtonSpawner : NetworkBehaviour
 
     private void OnButtonClicked()
     {
-        if (IsOwner || IsHost)
-        {
-            string objectName = transform.parent.name;
-            SpawnObjectServerRpc(objectName);
-        }
+        string objectName = transform.parent.name;
+        SpawnObjectServerRpc(objectName);
     }
 
     [ServerRpc(RequireOwnership = false)]

@@ -1025,6 +1025,7 @@ GameObject:
   - component: {fileID: 2504766601153154316}
   - component: {fileID: 5779283653209081721}
   - component: {fileID: 1404131687710096505}
+  - component: {fileID: 6557254589745774947}
   m_Layer: 0
   m_Name: Body2_LongHair
   m_TagString: Untagged
@@ -1431,6 +1432,18 @@ MonoBehaviour:
   spawner: {fileID: 0}
   respawnDelay: 3
   spawnableID: 2-Long
+--- !u!114 &6557254589745774947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6583708290207545341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c92a50d04576914c9476f9ea0a9c6ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7196764743888360175
 GameObject:
   m_ObjectHideFlags: 0

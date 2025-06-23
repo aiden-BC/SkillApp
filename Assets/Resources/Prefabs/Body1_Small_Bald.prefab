@@ -1004,6 +1004,7 @@ GameObject:
   - component: {fileID: -1744529347020935745}
   - component: {fileID: -4831897852661481908}
   - component: {fileID: 1123457868269935285}
+  - component: {fileID: 488651907556315189}
   m_Layer: 0
   m_Name: Body1_Small_Bald
   m_TagString: Untagged
@@ -1407,6 +1408,18 @@ MonoBehaviour:
   spawner: {fileID: 0}
   respawnDelay: 3
   spawnableID: Small-Bald
+--- !u!114 &488651907556315189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8437617303787577458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c92a50d04576914c9476f9ea0a9c6ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9094391548529342118
 GameObject:
   m_ObjectHideFlags: 0

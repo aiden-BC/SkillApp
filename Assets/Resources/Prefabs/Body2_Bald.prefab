@@ -276,6 +276,7 @@ GameObject:
   - component: {fileID: 7834032466985823962}
   - component: {fileID: -655194924225182533}
   - component: {fileID: -6371106768072957850}
+  - component: {fileID: 1385912904163810801}
   m_Layer: 0
   m_Name: Body2_Bald
   m_TagString: Untagged
@@ -679,6 +680,18 @@ MonoBehaviour:
   spawner: {fileID: 0}
   respawnDelay: 3
   spawnableID: 2-Bald
+--- !u!114 &1385912904163810801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4114577457600439974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c92a50d04576914c9476f9ea0a9c6ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4277932285014593276
 GameObject:
   m_ObjectHideFlags: 0
