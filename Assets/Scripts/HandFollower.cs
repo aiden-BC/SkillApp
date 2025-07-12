@@ -24,10 +24,7 @@ public class HandFollower : NetworkBehaviour
 
         // Actualiza la posición y rotación para que siga la mano
         transform.position = target.position;
-
-        // Aplica una rotación adicional de 90 grados en el eje X, por ejemplo
-        Quaternion offsetRotation = Quaternion.Euler(0f, 0f, 0f);
-        transform.rotation = target.rotation * offsetRotation;
+        transform.rotation = target.rotation;
 
     }
 }
